@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta Http-Equiv="Cache" content="no-cache">
+<meta Http-Equiv="Pragma-Control" content="no-cache">
+<meta Http-Equiv="Cache-directive" Content="no-cache">
+<meta Http-Equiv="Pragma-directive" Content="no-cache">
+<meta Http-Equiv="Cache-Control" Content="no-cache">
+<meta Http-Equiv="Pragma" Content="no-cache">
+<meta Http-Equiv="Expires" Content="0">
+<meta Http-Equiv="Pragma-directive: no-cache">
+<meta Http-Equiv="Cache-directive: no-cache">
+<title>Skin type-1</title>
+<style>
+	body,html,img{
+	 border:0; padding:0; margin:0;
+	}
+	/* div img{width:100%;} */
+</style>
+</head>
+
+<body>
+<div style="margin:0 auto;"><img class="NO-CACHE" src="images/main.jpg"/></div>
+<script>
+	var nods = document.getElementsByClassName('NO-CACHE');
+	for (var i = 0; i < nods.length; i++)
+	{
+		nods[i].attributes['src'].value += "?a=" + Math.random();
+	}
+</script>
+</body>
+</html>
