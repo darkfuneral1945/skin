@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{list-style: none;}
+h1{margin: 1em 0 0.3em;}
+.hidden{visibility: hidden;}
+p.comment{
+    font-size: 0.8em;
+    background-color: aliceblue;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 4px;
+}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.wrap{
+    width: 900px;
+    margin: 5em auto;
+    padding: 3em;
+    border: 1px solid #333;
+}
+section{
+    margin-bottom: 3em;
+}
+section h3{
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.7em;
+}
+section ul{
+    display: flex;
+    display: -ms-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+}
+section li{
+    flex: 0 1 23%;
+    margin:0 16px 16px 0;
+    position: relative;
+}
+section a{
+    display: block;
+    padding: 1em;
+    border-radius: 3px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #f7f8f9;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.10);
+    transition: all 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+    color: dodgerblue;
+}
+section li:hover a{
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 12px rgba(0,0,0,0.15);
+    background-color: #f7f8f9;
+    border-color: #ececec;
+}
+
+/*animate*/
+.checked a:before{
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: tomato;
+    position: absolute;
+    left: 16px;
+    top: 19px;
+    border-radius: 8px;
+    animation: crescendo 0.8s alternate infinite ease-in
+}
+@keyframes crescendo{
+    0%   {transform: scale(.7); opacity: 0.5;}
+    100% {transform: scale(1);}
+}
